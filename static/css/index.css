@@ -155,3 +155,10 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+small {
+	font-size: 55%;
+	font-weight: normal;
+    line-height: 1.42857143;
+    color: #999999
+}
