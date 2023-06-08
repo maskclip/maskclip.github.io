@@ -162,3 +162,8 @@ small {
     line-height: 1.42857143;
     color: #999999
 }
+
+.teaser_img {
+  height: 300px;
+  width: 450px;
+}

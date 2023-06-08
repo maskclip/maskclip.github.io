@@ -46,36 +46,6 @@
       <span aria-hidden="true"></span>
     </a>
   </div>
-  <!-- <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div> -->
 </nav>
 
 
@@ -92,19 +62,19 @@
             <span class="author-block">
               <a href="">Jieke Wang</a>,</span>
             <span class="author-block">
-              <a href="https://pages.ucsd.edu/~ztu/">Zhuowen Tu</a>,
+              <a href="https://pages.ucsd.edu/~ztu/">Zhuowen Tu</a>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">University of California, San Diego</span>
+            <span class="author-block">UC San Diego</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2208.08984"
+                <a href="./static/paper/MaskCLIP_ICML_2023_Camera_Ready.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -131,16 +101,6 @@
                   <span>Code (Coming Soon)</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
-              </span> -->
             </div>
 
           </div>
@@ -150,49 +110,50 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video> -->
-      <!-- <h2 class="subtitle has-text-centered">
-        <span class="dnerf">
-          TODO
-      </h2> -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-11">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-cars">
+              <img src="./static/images/cars.png" class="teaser_img">
+              <img src="./static/images/cars_pred.png" class="teaser_img">
+            </div>
+            <div class="item item-cars">
+              <img src="./static/images/horse_chicken.jpg" class="teaser_img">
+              <img src="./static/images/horse_chicken_pred.jpg" class="teaser_img">
+            </div>
+            <div class="item item-cars">
+              <img src="./static/images/rabbit.png" class="teaser_img">
+              <img src="./static/images/rabbit_pred.png" class="teaser_img">
+            </div>
+            <div class="item item-cars">
+              <img src="./static/images/persons.png" class="teaser_img">
+              <img src="./static/images/persons_pred.png" class="teaser_img">
+            </div>
+            <div class="item item-cars">
+              <img src="./static/images/horse_donkey.jpg" class="teaser_img">
+              <img src="./static/images/horse_donkey_pred.jpg" class="teaser_img">
+            </div>
+            <div class="item item-cars">
+              <img src="./static/images/bottle.jpg" class="teaser_img">
+              <img src="./static/images/bottle_pred.jpg" class="teaser_img">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
 
 <section class="hero is-light is-small">
   <div class="hero-body">
-    <div class="column has-text-centered">
-      <img src="./static/images/model.png"
-           class="interpolation-image"
-           alt="Interpolate start reference image."/>
-      <p> Illustration of the pipeline. Our pipeline contains two stages. The first stage is a 
-        class-agnostic mask proposal network and the second stage is built on the pretrained 
-        CLIP ViT model. All the weights of the CLIP ViT model during training are fixed. Arrows 
-        in orange denote weight sharing. The embeddings' weights of Mask Class Tokens are shared 
-        by Class Tokens in the CLIP ViT model and are fixed. RMA represents Relative Mask Attention 
-        which is built based on the CLIP ViT attention layer. RMA contains all the weights from CLIP 
-        ViT attention layer which are all fixed during training. Additional weights are added in RMA 
-        for further mask information utilization and mask refinement.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-11">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+        <div class="content has-text-justified" style="font-size:20px;">
           <p>
             In this paper, we tackle an emerging computer vision task, open-vocabulary universal image 
             segmentation, that aims to perform semantic/instance/panoptic segmentation (background 
@@ -212,45 +173,45 @@
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
+  </div>
   </div>
 </section>
 
-
-<section class="hero is-light is-small">
+<section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
-      <div class="columns is-2 is-centered">
-        <img src="./static/images/demo1.png" alt="demo">
-      </div>
-      <div class="columns is-2 is-centered">
-        <img src="./static/images/demo2.png" alt="demo">
-      </div>
+    <div class="columns is-centered has-text-centered">
+    
+    <div class="column is-7">
+      <h2 class="title is-3">Method</h2>
+      <img src="./static/images/model.png"
+           class="interpolation-image"
+           alt="Interpolate start reference image."/>
+           <div class="content has-text-justified" style="font-size:20px;">
+            Our pipeline contains two stages. The first stage is a 
+        class-agnostic mask proposal network and the second stage is built on the pretrained 
+        CLIP ViT model. All the weights of the CLIP ViT model during training are fixed. Arrows 
+        in orange denote weight sharing. The embeddings' weights of Mask Class Tokens are shared 
+        by Class Tokens in the CLIP ViT model and are fixed. RMA represents Relative Mask Attention 
+        which is built based on the CLIP ViT attention layer. RMA contains all the weights from CLIP 
+        ViT attention layer which are all fixed during training. Additional weights are added in RMA 
+        for further mask information utilization and mask refinement.
+          </div>
+    </div>
     </div>
   </div>
 </section>
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          TODO
-        </div>
-      </div>
-    </div> -->
-    <!--/ Concurrent Work. -->
-
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+    <div class="column is-7">
+      <h2 class="title is-3">Qualitative Results on ADE-20K</h2>
+      <img src="./static/images/ade20k.png" />
+    </div>
+    </div>
   </div>
 </section>
+
 
 
 <section class="section" id="BibTeX">
@@ -259,7 +220,7 @@
     <pre><code>@inproceedings{ding2023maskclip,
   author    = {Zheng Ding, Jieke Wang, Zhuowen Tu},
   title     = {Open-Vocabulary Universal Image Segmentation with MaskCLIP},
-  booktitle = {International conference on machine learning},
+  booktitle = {International Conference on Machine Learning},
   year      = {2023},
 }</code></pre>
   </div>
